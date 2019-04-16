@@ -15,7 +15,7 @@ local Title1 = display.newText ("Your age:", 160 , 200, native.systemFont, 20)
 Title1: setFillColor ( 255,255,255 )
 
 
-local Title2 = display.newText ("What day is it today:" , 160 , 310, native,systemFont, 40)
+local Title2 = display.newText ("What day is it today:" , 160 , 310, native.systemFont, 20)
 Title2: setFillColor ( 255,255,255 )
 
 
@@ -23,7 +23,7 @@ local AgeTextField = native.newTextField ( display.contentCenterX, display.conte
 AgeTextField.id = " Age "
 
 
-local DayTextField = native.newTextField( display.contentCenterX, display.contentCenterY + 100, 225, 40)
+local DayTextField = native.newTextField( display.contentCenterX, display.contentCenterY + 115, 225, 40)
 DayTextField.id = " Day "
 
 local ResponseText = display.newText ( "Are you eligible for discount? " , 160 , 130, native.systemFont, 20)
@@ -39,7 +39,7 @@ local function EnterButtonTouch( event )
  	
  	ResponseText.text = "You pay student pricing"
 
- 	elseif age >= 4 then
+ 	elseif age > = 4 then
 
  	ResponseText.text = "You pay infant pricing"
 
